@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o meu amor!</title>
+
+    <link rel="stylesheet" href="./lindeza.css">
+</head>
+
+
+<style>
+    body {
+        background-color: red;
+    }
+
+    .painel {
+        padding-top: 50px;
+        margin: auto;
+        text-align: center;
+        background-color: white;
+        width: 550px;
+        height: 550px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #Sim {
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: -50px;
+    }
+
+    #Nao {
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+    }
+
+</style>
+
+<body>
+
+    <div class="painel">
+        <h1>Surpresa, Lulu Bubbaloo!!!</h1>
+        <img src="https://i.pinimg.com/originals/3c/4c/9b/3c4c9bbafbb68491e8e785e0029d9ba9.gif" alt="">
+        <h2>Vamos viver para sempre juntos?</h2>
+
+        <a href="https://www.youtube.com/watch?v=XMFPclh-AO4&ab_channel=FihDohughast"><button id="Sim">Sim!</button></a>
+        <button onmouseover="fuja()" id="Nao">Não...</button>
+
+    </div>
+    
+    <script>
+        function fuja(){
+        var botaoNao = document.getElementById("Nao")
+        
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+</script>
+</body>
+
+</html>
